@@ -50,6 +50,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     redirect_to articles_path
+    # alabbiak nem voltak soha a hivatalos kodban, csak probalkozasok
     #if @article.destroy
     #  flash[:notice] = "Article was deleted successfully"
     #  redirect_to articles_path
