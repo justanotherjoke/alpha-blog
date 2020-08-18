@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:article]  #ez is egyfajta debug, igy a bongeszoben jelenik meg az article tartalma
     #@article = Article.new(params.require(:article).permit(:title, :description))
     @article = Article.new(article_params)
+    @article.user = User.first
     #render plain: @article.inspect
     if @article.save
       flash[:notice] = "Article was created successfully."
