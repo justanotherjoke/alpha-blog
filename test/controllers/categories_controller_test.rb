@@ -27,8 +27,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   test "should show category" do
     @category.save
     # it didn'n work:
-    #get category_url(@category)
-    get "/categories/:id", params: {'id' => @category.id}
+    get category_url(@category)
+    #get "/categories/:id", params: {'id' => @category.id}
     assert_response :success
   end
 
